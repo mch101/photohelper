@@ -65,6 +65,8 @@
                     <!--Text area for displaying color results-->
             </div>
         </div>
+        
+        <div class="fb-share-button" data-href="http://photohelper.azurewebsites.net" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fphotohelper.azurewebsites.net%2F&amp;src=sdkpreparse">Share</a></div>
 
         <!--jQuery Script-->
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
@@ -78,5 +80,14 @@
                 $('[data-toggle="tooltip"]').tooltip(); 
             });
         </script>
+        <!--Facebook share button script-->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     </body>
 </html>
