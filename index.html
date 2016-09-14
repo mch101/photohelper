@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PhotoHelper</title>
+        <!--Boostrap's CSS-->
+        <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <!--Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+
+    <body>
+        <div class="container" id="page-container">
+            <h1 id="app-name">
+                PhotoHelper
+            </h1>
+
+            <h2 id="page-header" data-toggle="tooltip" data-placement="bottom" title="Upload an image, then click the generate button!" >
+                Find dominant colours and tags of your photos
+            </h2>
+
+            <div class="btn-wrapper">
+                <label class="btn btn-info" for="my-file-selector">
+                    <input id="my-file-selector" type="file">
+                        Upload a picture here...
+                </label>
+            </div>
+
+            <div class="row" id="my-row">
+                <div class ="col-md-3"> 
+                </div>
+
+                <div class="col-md-6" id="col-id">
+                    <div class="thumbnail" id="thumb-id">
+                        <img id="selected-img" src="" alt="Uploaded image">
+                        <div class="caption">
+                            <h3>Your image</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3"> 
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-info" id="thumbnailbtn">Generate data</button>
+
+            <div class="container" id="color-text">
+                    <!--Text area for displaying color results-->
+            </div>
+        </div>
+
+        <!--jQuery Script-->
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <!--Bootstrap Script-->
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!--Custom Script-->
+        <script src="./js/main.js"></script>
+        <!--Script for bootstrap tooltip-->
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip(); 
+            });
+        </script>
+    </body>
+</html>
